@@ -3,7 +3,6 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import Prompt from './assets/pages/ml/prompt';
 
 function Feed() {
   return (
@@ -34,14 +33,14 @@ const Tab = createBottomTabNavigator();
 function MyTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="AI"
+      initialRouteName="Feed"
       screenOptions={{
-        tabBarActiveTintColor: '#ff9052',
+        tabBarActiveTintColor: '#e91e63',
       }}
     >
       <Tab.Screen
-        name="AI"
-        component={Prompt}
+        name="Feed"
+        component={Feed}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
