@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Prompt from './assets/pages/ml/prompt';
 import Home from './assets/pages/home/home';
-
+import Profile from './assets/pages/personal/screen';
 function Feed() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -14,13 +14,6 @@ function Feed() {
   );
 }
 
-function Profile() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Cá Nhân</Text>
-    </View>
-  );
-}
 
 function Notifications() {
   return (
@@ -41,7 +34,7 @@ function MyTabs() {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name="Trang chủ"
         component={Home}
         options={{
           tabBarLabel: 'Trang chủ',
@@ -51,7 +44,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="AI"
+        name="Công cụ AI"
         component={Prompt}
         options={{
           tabBarLabel: 'Một từ thật hay',
@@ -61,7 +54,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Notifications"
+        name="Thông báo"
         component={Notifications}
         options={{
           tabBarLabel: 'Thông báo',
@@ -71,7 +64,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Profile"
+        name="Cá nhân"
         component={Profile}
         options={{
           tabBarLabel: 'Cá nhân',

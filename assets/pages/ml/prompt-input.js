@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, TextInput} from 'react-native';
 
 const TextInputExample = () => {
-  const [text, onChangeText] = React.useState('Mình đang thiếu ngủ');
+  const [text, onChangeText] = React.useState();
 
   return (
     <SafeAreaView>
@@ -12,6 +12,7 @@ const TextInputExample = () => {
         value={text}
         multiline = {false}  
         numberOfLines = {4}
+        placeholder="Mình thiếu ngủ vl ahuhu"
       />
     </SafeAreaView>
   );
