@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View } from 'react-native';
-import SignButton from "../../components/sign-button";
+import { Image, Text, View } from 'react-native';
+import SignButton from "../../components/signin-button";
 import TextUsername from "../../components/username-input";
 import TextPassword from "../../components/password-input";
 
@@ -34,7 +34,7 @@ function Login({ navigation }) {
             padding: 10,
             alignItems: 'center',
         }}>
-            Chào mừng trở lại
+            Bạn đói chưa? :3c 
         </Text>
         <TextUsername></TextUsername>
         <TextPassword></TextPassword>
@@ -49,8 +49,28 @@ function Login({ navigation }) {
             Quên mật khẩu?
         </Text>
         <SignButton></SignButton>
-        
+        <Text style={{ 
+            fontSize: 14,
+            fontWeight:500,
+            color: '#000000',
+            margin: 2,
+            padding: 50,
+        }}>
+            Tạo tài khoản mới
+        </Text>
+        <Text style={{ 
+            fontSize: 14,
+            fontWeight:500,
+            color: '#FF9052',
+            margin: 2,
+            padding: 10,
+        }}>
+            Đăng nhập bằng
+        </Text>
+        <Image source={require('../../socialmedia.png')}/>
+     
     </View>
+    
   )
 }
 export default Login;
