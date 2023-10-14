@@ -1,7 +1,6 @@
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 import PromptInput from './prompt-input';
 import SearchButton from './button';
-import Background from '/Users/phamdoanphuonganh/Desktop/ditmeSheCodes/SheCodesGiaVi/assets/img/objects.png';
 
 const Prompt = () => {
     return (
@@ -12,7 +11,6 @@ const Prompt = () => {
             backgroundColor: '#FFFFFF',
                }}>
             <View>
-            <ImageBackground source={Background} resizeMode="cover"></ImageBackground>
         </View>
         <Text style={{
             fontSize: 20,

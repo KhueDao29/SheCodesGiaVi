@@ -6,6 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Prompt from './assets/pages/ml/prompt';
 import Home from './assets/pages/home/home';
 import Profile from './assets/pages/personal/screen';
+import Dashboard from './assets/pages/dashboard/dashboard';
 function Feed() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -35,7 +36,7 @@ function MyTabs() {
     >
       <Tab.Screen
         name="Trang chủ"
-        component={Home}
+        component={Dashboard}
         options={{
           tabBarLabel: 'Trang chủ',
           tabBarIcon: ({ color, size }) => (
@@ -81,6 +82,7 @@ function MyTabs() {
 export default function App() {
   return (
     <NavigationContainer>
+
       <MyTabs />
     </NavigationContainer>
   );
