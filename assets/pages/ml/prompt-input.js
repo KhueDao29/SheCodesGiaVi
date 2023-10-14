@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, TextInput} from 'react-native';
 
 const TextInputExample = () => {
-  const [text, onChangeText] = React.useState('Ditme');
+  const [text, onChangeText] = React.useState('Mình đang thiếu ngủ');
 
   return (
     <SafeAreaView>
@@ -10,6 +10,8 @@ const TextInputExample = () => {
         style={styles.input}
         onChangeText={onChangeText}
         value={text}
+        multiline = {false}  
+        numberOfLines = {4}
       />
     </SafeAreaView>
   );
