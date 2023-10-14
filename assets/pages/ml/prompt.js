@@ -3,7 +3,13 @@ import PromptInput from './prompt-input';
 import SearchButton from './button';
 import Background from '/Users/phamdoanphuonganh/Desktop/ditmeSheCodes/SheCodesGiaVi/assets/img/objects.png';
 
-const Prompt = () => {
+import * as React from 'react';
+import { Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+function Prompt ({navigation}) {
     return (
         <View style={{
             flex: 1,
@@ -27,15 +33,16 @@ const Prompt = () => {
             textAlign: 'center',
             margin: 2,
             fontWeight: '300',
-            color: '#000000',
-        }}
+            color: '#000000', }}
         >
             Cho GiaVi biết ở đây nhé
         </Text>
         <PromptInput></PromptInput>
-        <SearchButton></SearchButton>
+        <SearchButton title="Go to Result"
+            onPress={() => navigation.navigate('Kết quả')}>
+        </SearchButton>
         </View>
     )
 }
 
-export default Prompt
+export default Prompt;

@@ -6,6 +6,8 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Prompt from './assets/pages/ml/prompt';
 import Home from './assets/pages/home/home';
 import Profile from './assets/pages/personal/screen';
+import Result from './assets/pages/result/result';
+
 function Feed() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -73,7 +75,6 @@ function MyTabs() {
           ),
         }}
       />
-
     </Tab.Navigator>
   );
 }
