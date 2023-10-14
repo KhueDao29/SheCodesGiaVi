@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Prompt from './assets/pages/ml/prompt';
+import Home from './assets/pages/home/home';
 
 function Feed() {
   return (
@@ -16,7 +17,7 @@ function Feed() {
 function Profile() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Profile!</Text>
+      <Text>Cá Nhân</Text>
     </View>
   );
 }
@@ -24,7 +25,7 @@ function Profile() {
 function Notifications() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications!</Text>
+      <Text>Thông Báo</Text>
     </View>
   );
 }
@@ -40,12 +41,22 @@ function MyTabs() {
       }}
     >
       <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarLabel: 'Trang chủ',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
         name="AI"
         component={Prompt}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Một từ thật hay',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <MaterialCommunityIcons name="auto-fix" color={color} size={size} />
           ),
         }}
       />
@@ -53,7 +64,7 @@ function MyTabs() {
         name="Notifications"
         component={Notifications}
         options={{
-          tabBarLabel: 'Updates',
+          tabBarLabel: 'Thông báo',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="bell" color={color} size={size} />
           ),
@@ -63,12 +74,13 @@ function MyTabs() {
         name="Profile"
         component={Profile}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: 'Cá nhân',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
         }}
       />
+
     </Tab.Navigator>
   );
 }
