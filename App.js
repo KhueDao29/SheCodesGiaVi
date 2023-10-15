@@ -8,6 +8,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Prompt from './assets/pages/ml/prompt';
 import Home from './assets/pages/home/home';
 import Profile from './assets/pages/personal/screen';
+
 import Dashboard from './assets/pages/dashboard/dashboard';
 import Login from './assets/pages/login/login'
 import Regist from './assets/pages/registration/registration';
@@ -82,7 +83,6 @@ function MyTabs() {
           ),
         }}
       />
-
     </Tab.Navigator>
   );
 }
