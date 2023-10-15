@@ -1,6 +1,6 @@
 # GiaVi
 
-This is the source code for the app HoCo. 
+This is the source code for the app GiaVi. 
 GiaVi connects users with stay-at-home parent(s) to provide fresh and customized meals on demand, while providing stay-at-home parent(s) with extra income.
 
 
