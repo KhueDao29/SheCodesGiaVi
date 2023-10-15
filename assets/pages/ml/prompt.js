@@ -1,7 +1,7 @@
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import PromptInput from './prompt-input';
 import SearchButton from './button';
-import Background from '/Users/phamdoanphuonganh/Desktop/ditmeSheCodes/SheCodesGiaVi/assets/img/objects.png';
+import Robot from './Asset1.png';
 
 import * as React from 'react';
 import { Button } from 'react-native';
@@ -18,7 +18,11 @@ function Prompt ({navigation}) {
             backgroundColor: '#FFFFFF',
                }}>
             <View>
-            <ImageBackground source={Background} resizeMode="cover"></ImageBackground>
+            <Image style = {{
+                height: 150,
+                width: 250,
+                resizeMode: 'contain'
+            }}source={Robot}/>
         </View>
         <Text style={{
             fontSize: 20,
