@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 import PromptInput from './prompt-input';
 import SearchButton from './button';
+
 import Robot from './Asset1.png';
 
 import * as React from 'react';
@@ -18,11 +19,13 @@ function Prompt ({navigation}) {
             backgroundColor: '#FFFFFF',
                }}>
             <View>
+
             <Image style = {{
                 height: 150,
                 width: 250,
                 resizeMode: 'contain'
             }}source={Robot}/>
+
         </View>
         <Text style={{
             fontSize: 20,

@@ -40,7 +40,7 @@ export default class UserProfileView extends Component {
           </Pressable>
           <View>
             <Pressable style={styles.btn}>
-              <Text style={styles.text}>Thay đổi</Text>
+              <Text style={styles.text}>Đăng xuất</Text>
             </Pressable>
           </View>
         </View>
