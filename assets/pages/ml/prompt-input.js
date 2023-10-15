@@ -12,7 +12,7 @@ const TextInputExample = () => {
         value={text}
         multiline = {false}  
         numberOfLines = {4}
-        placeholder="Mình thiếu ngủ vl ahuhu"
+        placeholder="Bạn muốn ăn gì trong 48 tiếng tới?"
       />
     </SafeAreaView>
   );

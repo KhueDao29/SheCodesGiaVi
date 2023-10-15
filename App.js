@@ -3,10 +3,17 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import Prompt from './assets/pages/ml/prompt';
 import Home from './assets/pages/home/home';
 import Profile from './assets/pages/personal/screen';
 import Dashboard from './assets/pages/dashboard/dashboard';
+import Login from './assets/pages/login/login'
+import Regist from './assets/pages/registration/registration';
+
+const Stack = createNativeStackNavigator();
+
 function Feed() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -82,8 +89,11 @@ function MyTabs() {
 export default function App() {
   return (
     <NavigationContainer>
-
-      <MyTabs />
+        {/* <Stack.Navigator> */}
+            {/* { <Stack.Screen name = "Login" component={Login}/>} */}
+            {/* <Stack.Screen name = "Regist" component={Regist}/> */}
+        {/* </Stack.Navigator> */}
+        <MyTabs />
     </NavigationContainer>
   );
 }

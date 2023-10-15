@@ -34,7 +34,7 @@ function Login({ navigation }) {
             padding: 10,
             alignItems: 'center',
         }}>
-            Bạn đói chưa? :3c 
+            Bạn đói chưa? Đặt hàng thôi!
         </Text>
         <TextUsername></TextUsername>
         <TextPassword></TextPassword>

@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import {SafeAreaView, ScrollView, StyleSheet, Pressable, Text, View, Image } from "react-native";
+import {StatusBar,SafeAreaView, ScrollView, StyleSheet, Pressable, Text, View, Image } from "react-native";
 import profile from "../../choemcaibong.png";
 import Order from "./order";
-import CancelButton from "../../components/cancel-button";
 
 export default class Dashboard extends Component {
   render() {
     return (
       
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.containerScroll}>
       <ScrollView style={styles.scrollView}>
+      <View style={{
+        height: 1230
+      }}>
       <View style={styles.container}>
         <View style={styles.header}>
           <View style={styles.headerContent}>
@@ -92,8 +94,18 @@ export default class Dashboard extends Component {
               width: 350
             }}>
                 <Order></Order>  
+                <View style={{
+                  marginVertical:10
+                }}></View>
+                <Order></Order>  
+                <View style={{
+                  marginVertical:10
+                }}></View>
+                <Order></Order>  
+                
             </View>
         </View>
+      </View>
       </View>
       </ScrollView>
     </SafeAreaView>
@@ -102,9 +114,19 @@ export default class Dashboard extends Component {
 }
 
 const styles = StyleSheet.create({
+  containerScroll: {
+    flex: 1,
+    paddingTop: StatusBar.currentHeight,
+
+  },
+  scrollView: {
+    backgroundColor: 'white',
+    // marginHorizontal: 20,
+    // automaticallyAdjustContentInsets: true,
+    },
   header: {
     backgroundSize: "contain",
-    height: 200,
+    height: 150,
     backgroundColor: "#FEF3E7",
   },
 
@@ -233,10 +255,5 @@ const styles = StyleSheet.create({
     marginTop: -50,
     padding: 10,
     paddingLeft: 100,
-  },
-  scrollView: {
-    backgroundColor: 'white',
-    // marginHorizontal: 10,
-    automaticallyAdjustContentInsets: true
   },
 });

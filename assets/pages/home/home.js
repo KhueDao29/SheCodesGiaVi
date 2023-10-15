@@ -1,9 +1,42 @@
-import { StyleSheet, Text, View } from 'react-native';
-
-const Login = () => {
+import {Image, StatusBar,SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import home from './home.png'
+const Home = () => {
     return (
-        <View><Text>trasuakhonghanh</Text></View>
+        <SafeAreaView style={styles.container}>
+            <ScrollView style={styles.scrollView}>
+                <View style={styles.containerimage}>
+                    <Image source= {home}
+                            style={styles.image}
+                    />
+                </View>
+        
+            </ScrollView>
+        </SafeAreaView>
+        
     )
 }
 
-export default Login;
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      paddingTop: StatusBar.currentHeight,
+    },
+    scrollView: {
+      backgroundColor: 'white',
+      marginHorizontal: 5,
+      
+    },
+    text: {
+      fontSize: 42,
+    },
+    containerimage: {
+        paddingTop: 15,
+      },
+      image: {
+        width: 400,
+        height: 1180,
+      },
+  });
+  
+export default Home;

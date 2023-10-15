@@ -1,6 +1,8 @@
 import React from 'react';
 import {Image, View, Text, StyleSheet, Pressable } from 'react-native';
 import profile from "../personal/profile.png";
+import CancelButton from '../../components/cancel-button';
+import ConfirmButton from '../../components/confirm-button';
 
 export default function Order(props) {
   
@@ -16,7 +18,7 @@ export default function Order(props) {
                 />
             </View>
             <View>
-                <Text style={styles.name}>Bạn Nhẫn ở văn phòng S</Text>
+                <Text style={styles.name}>Vũ Ngọc Hân ở phòng NTT</Text>
             </View>
             
           </View>
@@ -57,14 +59,28 @@ export default function Order(props) {
                         <Text style={styles.total}>Tổng cộng</Text>
                     </View>
                     <View>
-                         <Text style={styles.totalprice}>400.000.000</Text>
+                         <Text style={styles.totalprice}>400.000</Text>
                     </View>
-                </View>                
+                </View>   
+
+                
+                <View style={styles.headerContent3}>
+                    <View style={{ flex: 1}}>
+                        <CancelButton></CancelButton>
+                    </View>
+                    <View>
+                         <ConfirmButton></ConfirmButton>
+                    </View>
+                </View>   
+
+                
+
+                <View>                
+                   
+                </View>        
           </View>
+             
         </View>
-        
-
-
     </View>
   );
 }
@@ -168,7 +184,7 @@ const styles = StyleSheet.create({
     name2: {
     fontSize: 14,
     color: "medium",
-    fontWeight: "400",
+    fontWeight: "700",
     fontFamily: "Helvetica",
     marginTop: 0,
     marginBottom: -40,
@@ -184,17 +200,17 @@ const styles = StyleSheet.create({
     name4: {
         fontSize: 14,
         color: "medium",
-        fontWeight: "400",
+        fontWeight: "700",
         fontFamily: "Helvetica",
-        marginTop: -20,
+        marginTop: -10,
         marginBottom: -40,
         },
     name5: {
         fontSize: 14,
         color: "medium",
-        fontWeight: "400",
+        fontWeight: "700",
         fontFamily: "Helvetica",
-        marginTop: -20,
+        marginTop: -10,
         marginBottom: -40,
         },
     total: {
@@ -208,12 +224,27 @@ const styles = StyleSheet.create({
     totalprice: {
         fontSize: 20,
         color: "medium",
-        fontWeight: "400",
+        fontWeight: "600",
         fontFamily: "Helvetica",
+        marginLeft: 50,
         marginTop: -20,
         marginBottom: -40,
         },
     headerContent2: {
+        paddingHorizontal: 40,
+        paddingVertical: 20,
+        height: 20,
+        alignItems: "center",
+        alignSelf:'flex-start',
+        display: "flex",
+        flex: 1,
+        flexDirection: "row",
+        flexWrap: "wrap",
+        marginBottom: -25
+        
+      },
+
+      headerContent3: {
         paddingHorizontal: 40,
         paddingVertical: 20,
         height: 20,

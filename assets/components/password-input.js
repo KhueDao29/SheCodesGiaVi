@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react'; 
 import {SafeAreaView, StyleSheet, TextInput} from 'react-native';
+
 
 const TextPassword = () => {
   const [text, onChangeText] = React.useState();
+  const [password, setPassword] = useState(''); 
+
+  const [showPassword, setShowPassword] = useState(false); 
 
   return (
+
     <SafeAreaView>
       <TextInput
         style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
+        onChangeText={setPassword}
+        value={password}
         placeholder='Mật khẩu'
+        secureTextEntry={!showPassword}
       />
     </SafeAreaView>
   );
