@@ -11,6 +11,7 @@ import Profile from './assets/pages/personal/screen';
 import Dashboard from './assets/pages/dashboard/dashboard';
 import Login from './assets/pages/login/login'
 import Regist from './assets/pages/registration/registration';
+import Message from './assets/pages/message/message';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,7 +44,7 @@ function MyTabs() {
     >
       <Tab.Screen
         name="Trang chủ"
-        component={Dashboard}
+        component={Message}
         options={{
           tabBarLabel: 'Trang chủ',
           tabBarIcon: ({ color, size }) => (
